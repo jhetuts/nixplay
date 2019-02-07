@@ -1,0 +1,339 @@
+@font-face{
+    font-family: 'Avenir';
+    src: url(../assets/fonts/avenir-next-regular.ttf);
+}
+
+html,
+body{
+    font-size: 14px;
+    font-family: 'Avenir', 'Avenir W01',Helvetica,Arial,sans-serif;
+    font-weight: 300;
+}
+/* RESET */
+*{
+    padding: 0;
+    margin: 0;
+}
+ul, ol, li{
+    list-style: none;
+}
+
+/* Common */
+.clearfix:after{
+    display: table;
+    clear: both;
+    content: '';
+}
+.container{
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 16px 0;
+    box-shadow: 0 1px 10px #bbb;
+    box-sizing: border-box;
+    z-index: 9;
+    background-color: #fff;
+}
+.header-left{
+    float: left;
+}
+.header-right{
+    float: right;
+}
+h1{
+    display: inline-block;
+    width: 150px;
+}
+h1 img{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Countries */
+ul.list-countries{
+    text-align: right;
+}
+ul.list-countries .list-country-item{
+    display: inline-block;
+    width: 40px;
+    margin-right: 20px;
+}
+ul.list-countries .list-country-item:last-child{
+    margin-right: 0;
+}
+main{
+    position: relative;
+    z-index: 2;
+}
+.section{
+    position: relative;
+    overflow: hidden;
+}
+.section-01 .banner{
+    position: absolute;
+    width: 960px;
+    top: 50%;
+    left: 50%;
+    margin: 0 auto;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+
+}
+.banner h2{
+    display: inline-block;
+    width: 225px;
+}
+.banner h2 img{
+    width: 100%;
+    box-sizing: border-box;
+}
+.banner p.lead{
+    font-size: 260%;
+    color: #707070;
+}
+.connections{
+    margin-top: 8%;
+}
+.connections h3{
+    font-size: 139%;
+    font-weight: 500;
+}
+.connections .list-connections{
+    width: 674px;
+    margin: 0 auto;
+    text-align: left;
+}
+.list-connections .list-connection-item{
+    display: inline-block;
+    width: 28.83%;
+    padding: 2%;
+    vertical-align: middle;
+    text-align: center;
+}
+.list-connections .list-connection-item img{
+    width: 100%;
+    box-sizing: border-box;
+}
+.list-connections .list-connection-item:nth-child(2) img{
+    width: 60%;
+}
+.list-connections .list-connection-item:nth-child(5) img{
+    width: 80%;
+}
+p.scroller{
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    font-size: 150%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+p.scroller:after{
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    background: url(../assets/images/right-arrow.svg) no-repeat center center / cover;
+    transform: rotate(90deg);
+    content: '';
+}
+
+.section-02.item0{
+    background: linear-gradient(to bottom left, #fdb7b7 60%, #fff);
+}
+.section-02.item1{
+    background: linear-gradient(to bottom left, #96abd2 60%, #fff);
+}
+.section-02.item2{
+    background: linear-gradient(to bottom left, #afe4f1 60%, #fff);
+}
+.section-02.item3{
+    background: linear-gradient(to bottom left, #89d8c8 60%, #fff);
+}
+.section-02 .products-wrap{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0 20px;
+    box-sizing: border-box;
+    border-left: 2px solid #000;
+}
+.products-wrap .product-details{
+    position: relative;
+    top: 50%;
+    width: 80%;
+    padding: 20px 0;
+    height: 450px;
+    margin: 0 auto;
+    vertical-align: middle;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+.list-menu{
+    position: absolute;
+    top: 50%;
+    left: -2px;
+    transform: translateY(-50%);
+    font-size: 150%;
+    z-index: 1;
+}
+.list-menu li{
+    margin-bottom: 10px;
+}
+.list-menu li a{
+    padding-left: 20px;
+    border-left: 2px solid #000;
+    text-decoration: none;
+    color: #000;
+}
+.list-menu li.active a{
+    font-weight: bold;
+    border-left: 2px solid #fff;
+}
+.product-details #product-image,
+.product-details #product-description{
+    position: relative;
+    float: left;
+    width: 50%;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+#product-description .title-s{
+    position: relative;
+    height: 91px;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+.title-s .titles-wrap{
+    position: relative;
+}
+.product-details #product-description{
+    padding: 0 30px;
+}
+#product-image p{
+    position: relative;
+    width: 60%;
+    height: 500px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+#product-image img{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    box-sizing: border-box;
+    transform: translateY(-50%);
+}
+#product-title{
+    font-size: 400%;
+    font-weight: bold;
+}
+#product-tagline{
+    font-size: 150%;
+}
+.learn-more{
+    display: inline-block;
+    margin-bottom: 30px;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+}
+#product-size{
+    margin-bottom: 30px;
+}
+#product-size li{
+    display: inline-block;
+    position: relative;
+    font-size: 150%;
+    font-weight: bold;
+    font-style: italic;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    color: #000;
+    border-radius: 100%;
+    border: 2px solid #000;
+}
+#product-size li span{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 26px;
+    right: 0;
+    margin: auto;
+}
+#product-size li.active{
+    background: #000;
+    color: #fff;
+}
+#product-features{
+    margin-bottom: 40px;
+}
+#product-features li{
+    display: inline-block;
+    width: 40px;
+    margin-right: 10px;
+    text-align: center;
+    vertical-align: top;
+    font-weight: bold;
+}
+#product-features li span{
+    display: block;
+}
+.buy-now{
+    display: inline-block;
+    padding: 15px 54px;
+    text-align: center;
+    background: #f19100;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+.list-controllers{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+.list-controllers li a{
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: #000;
+    border-radius: 100%;
+}
+.list-controllers li a:before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    border-left: 1px solid #fff;
+    border-top: 1px solid #fff;
+    content: '';
+}
+.list-controllers li a#prev:before{
+    top: 8px;
+    transform: rotate(45deg);
+}
+
+.list-controllers li a#next:before{
+    top: -8px;
+    transform: rotate(-133deg);
+}
