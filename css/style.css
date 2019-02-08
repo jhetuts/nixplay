@@ -209,7 +209,7 @@ p.scroller:after{
 #product-description .title-s{
     position: relative;
     height: 91px;
-    margin-bottom: 40px;
+    margin-bottom: 7%;
     overflow: hidden;
 }
 .title-s .titles-wrap{
@@ -241,7 +241,7 @@ p.scroller:after{
 }
 .learn-more{
     display: inline-block;
-    margin-bottom: 30px;
+    margin-bottom: 6%;
     color: #fff;
     border: 2px solid #fff;
     padding: 10px 20px;
@@ -250,7 +250,7 @@ p.scroller:after{
     border-radius: 6px;
 }
 #product-size{
-    margin-bottom: 30px;
+    margin-bottom: 5%;
 }
 #product-size li{
     display: inline-block;
@@ -264,6 +264,7 @@ p.scroller:after{
     color: #000;
     border-radius: 100%;
     border: 2px solid #000;
+    transform: 1s;
 }
 #product-size li span{
     position: absolute;
@@ -279,7 +280,7 @@ p.scroller:after{
     color: #fff;
 }
 #product-features{
-    margin-bottom: 40px;
+    margin-bottom: 6%;
 }
 #product-features li{
     display: inline-block;
