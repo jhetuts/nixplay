@@ -5,6 +5,11 @@ const products = [
         p_sizes: {
             p_size_1: '8'
         },
+        p_color: {
+            light_brown: '#d4aa9b',
+            white: '#fff',
+            hershey: '#6c4840'
+        },
         p_properties: {
             p_prop_1: {
                 title: 'WIFI',
@@ -22,6 +27,11 @@ const products = [
             p_size_2: '10',
             p_size_3: '13'
         },
+        p_color: {
+            blue: '#0d3f91',
+            black: '#000',
+            orange: '#ff9301'
+        },
         p_properties: {
             p_prop_1: {
                 title: 'WIFI',
@@ -36,6 +46,9 @@ const products = [
         p_tagline: 'Basic and black with high-resolution display.',
         p_sizes: {
             p_size_1: '8'
+        },
+        p_color: {
+            black: '#000'
         },
         p_properties: {
             p_prop_1: {
@@ -59,6 +72,9 @@ const products = [
         p_tagline: 'Entry series with larger screen size options',
         p_sizes: {
             p_size_1: '15'
+        },
+        p_color: {
+            black: '#000'
         },
         p_properties: {
             p_prop_1: {

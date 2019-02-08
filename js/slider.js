@@ -40,10 +40,11 @@ $(window).on('load resize', function(){
         prev = $('#prev'),
         id = 0;
 
-    changeBG(id);
-    loadProductSize(id);
     updateButton(id);
+    loadProductSize(id);
     loadProductProperties(id);
+    changeBG(id);
+    elipsis(id);
     
     $('#product-description .title-s').css('height', titleH);
 
@@ -53,10 +54,11 @@ $(window).on('load resize', function(){
         
         slideLi(id);
         slide(id);
-        updateButton(id);
-        changeBG(id);
         loadProductSize(id);
         loadProductProperties(id);
+        updateButton(id);
+        elipsis(id);
+        changeBG(id);
     
         e.preventDefault();
     });
@@ -70,12 +72,13 @@ $(window).on('load resize', function(){
             --id;
         }
 
-        slide(id);
         slideLi(id);
-        updateButton(id);
-        changeBG(id);
+        slide(id);
         loadProductSize(id);
         loadProductProperties(id);
+        updateButton(id);
+        elipsis(id);
+        changeBG(id);
 
         e.preventDefault();
     });
@@ -83,17 +86,17 @@ $(window).on('load resize', function(){
     // Button Show and Hide
     function updateButton(id){
         if(id === 0){
-            $(prev).css({'visibility': 'hidden'});
-            $(next).css({'visibility' : 'visible'});
+            $(prev).animate({'opacity': 0}, 300).css('visibility', 'hidden');
+            $(next).animate({'opacity': 1}, 300).css('visibility', 'visible');
         } else {
-            $(prev).css({'visibility' : 'visible'});
+            $(prev).animate({'opacity': 1}, 300).css('visibility', 'visible');
         }
 
         if(id === listCount){
-            $(next).css({'visibility': 'hidden'});
-            $(prev).css({'visibility' : 'visible'});
+            $(next).animate({'opacity': 0}, 300).css('visibility', 'hidden');
+            $(prev).animate({'opacity': 1}, 300).css('visibility', 'visible');
         } else {
-            $(next).css({'visibility' : 'visible'});
+            $(next).animate({'opacity': 1}, 300).css('visibility', 'visible');
         }
     }
 
@@ -122,7 +125,7 @@ $(window).on('load resize', function(){
     }
 
     function loadProductSize(id){
-        $('#product-size').hide();
+        
         let sizes = document.getElementById('product-size');
         let li = "";
         for(let key in products){
@@ -133,14 +136,14 @@ $(window).on('load resize', function(){
                     `;
                 }
                 sizes.innerHTML = li;
+                $('#product-size li').hide();
                 $('#product-size li').eq(0).addClass('active');
-                $('#product-size').fadeIn(500);
+                $('#product-size li').fadeIn(500);                
             }
         }
     }
 
     function loadProductProperties(id){
-        $('#product-features').hide();
         let prop = document.getElementById('product-features');
         let li = "";
         for(let key in products){
@@ -151,7 +154,32 @@ $(window).on('load resize', function(){
                     `;
                 }
                 prop.innerHTML = li;
-                $('#product-features').fadeIn(500);
+                $('#product-features li').hide();
+                $('#product-features li').fadeIn(500);
+            }
+        }
+    }
+
+    function elipsis(id){
+        let elipsis = document.getElementById('elipsis');
+        let li = "";
+        for(let key in products){
+            if(key == id){
+                for(let key2 in products[key].p_color){
+                    li += `
+                        <li><span style="background-color: ${products[key].p_color[key2]}"></span></li>
+                    `;
+                }
+                elipsis.innerHTML = li;
+
+                if($('#elipsis li').length == 1){
+                    $('#elipsis li').eq(0).addClass('active');
+                } else {
+                    $('#elipsis li').eq(1).addClass('active').siblings().removeClass('active');
+                }
+
+                $('#elipsis li').hide();
+                $('#elipsis li').fadeIn(500);
             }
         }
     }

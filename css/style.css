@@ -209,7 +209,7 @@ p.scroller:after{
 #product-description .title-s{
     position: relative;
     height: 91px;
-    margin-bottom: 7%;
+    margin-bottom: 40px;
     overflow: hidden;
 }
 .title-s .titles-wrap{
@@ -241,7 +241,7 @@ p.scroller:after{
 }
 .learn-more{
     display: inline-block;
-    margin-bottom: 6%;
+    margin-bottom: 30px;
     color: #fff;
     border: 2px solid #fff;
     padding: 10px 20px;
@@ -250,7 +250,7 @@ p.scroller:after{
     border-radius: 6px;
 }
 #product-size{
-    margin-bottom: 5%;
+    margin-bottom: 30px;
 }
 #product-size li{
     display: inline-block;
@@ -264,7 +264,7 @@ p.scroller:after{
     color: #000;
     border-radius: 100%;
     border: 2px solid #000;
-    transform: 1s;
+    cursor: pointer;
 }
 #product-size li span{
     position: absolute;
@@ -280,7 +280,7 @@ p.scroller:after{
     color: #fff;
 }
 #product-features{
-    margin-bottom: 6%;
+    margin-bottom: 40px;
 }
 #product-features li{
     display: inline-block;
@@ -311,8 +311,8 @@ p.scroller:after{
 .list-controllers li a{
     display: inline-block;
     position: relative;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background: #000;
     border-radius: 100%;
 }
@@ -323,17 +323,40 @@ p.scroller:after{
     right: 0;
     bottom: 0;
     margin: auto;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     border-left: 1px solid #fff;
     border-top: 1px solid #fff;
     content: '';
+}
+#elipsis{
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+}
+#elipsis li{
+    padding: 5px;
+    text-align: center;
+    margin-bottom: 30px;
+    border-radius: 100%;
+}
+#elipsis li.active{
+    border: 2px solid #767678;
+}
+#elipsis li:last-child{
+    margin-bottom: 0;
+}
+#elipsis li span{
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
 }
 .list-controllers li a#prev:before{
     top: 8px;
     transform: rotate(45deg);
 }
-
 .list-controllers li a#next:before{
     top: -8px;
     transform: rotate(-133deg);
